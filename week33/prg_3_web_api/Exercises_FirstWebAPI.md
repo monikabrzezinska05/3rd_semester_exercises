@@ -1,4 +1,6 @@
 
+### Guided solutions can be found here: https://github.com/uldahlalex/dotnetwebapi check Controllers/SolutionsController.cs
+
 ## Important: .NET 8 uses another default layout, so i recommend cloning this repo with version 8 and controllers:
 
 ```bash
