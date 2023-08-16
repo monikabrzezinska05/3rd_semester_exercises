@@ -91,6 +91,8 @@ Return a "Bad request" response to a client by throwing an exception.
 
 ### Make a CRUD web API with in-memory database
 
+Please be patient with this exercises - it may require some time. I have deliberately not created a guided solution for this one.
+
 **Task:** Now that you know the basics of making API's, make a Web API which performs basic CRUD operations (without a database - just keep the data in memory).
 
 The following features should be supported:
