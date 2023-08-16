@@ -30,7 +30,7 @@ https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swa
 
 ---
 
-### New Controller
+### New Controller with controller method
 
 
 
@@ -55,6 +55,19 @@ Now run the application, and send a request to your localhost webserver (see por
 - **Success Criteria:** You should be able to discover the endpoint in Swagger and send request and get a response.
 
 **Objective:** Learn to make a new controller method and request this.
+
+---
+
+### Two methods in one controller
+
+
+
+**Task:** Add another method with a different route than the first one. Make it return a different string than the first one.
+
+**Success Criteria:** You should be able to access both controller methods by sending requests to different routes.
+
+**Learning Objective:** You should notice that the server can respond with different content depending on the request route.
+
 
 ---
 
