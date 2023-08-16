@@ -75,7 +75,7 @@ Now run the application, and send a request to your localhost webserver (see por
 
 **Task:** A client wants to request some particular piece of data (like something to be looked up in a database by ID).
 
-Read this section about parameter binding:
+Read this section about parameter binding: https://www.dotnettricks.com/learn/webapi/model-binding-model-binder-example
 
 Now use The [FromRoute] attribute to bind an ID in a url such as 
 http://localhost:5000/entity/123
