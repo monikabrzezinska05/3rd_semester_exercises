@@ -49,9 +49,9 @@ Bonus: Why do you think .NET Web API is capable of "automatically" adding your C
 [FromRoute] int id
 ```
 in the method parameter
-). Return the ID to the requester.
+). Return the id to the requester.
 
-**Success criteria:** When inserting ID 42 in Swagger as route segment, you should be 
+**Success criteria:** When inserting id 42 in Swagger as route segment, you should be able to get the id number response
 
 
 **Learning objective:** You must know how to read/get data from a route segment which the client passes
