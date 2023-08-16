@@ -75,6 +75,8 @@ Return the value to the client.
 
 ### GET with header attached
 
+#### Correction: Here I meant SET a header with query params, not read
+
 **Task:** Make a GET endpoint that can read a header using:
 
 ```c#
@@ -90,6 +92,8 @@ Return the value to the client.
 ---
 
 ### Setting some custom header
+
+#### Note: You can both read/write the headers using this class:
 
 **Task:** Use the HttpContext class to set some HTTP response header in some endpoint.
 
