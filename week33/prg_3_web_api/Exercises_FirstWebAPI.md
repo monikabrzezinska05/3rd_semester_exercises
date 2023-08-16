@@ -1,3 +1,10 @@
+
+## Important: .NET 8 uses another default layout, so i recommend cloning this repo with version 8 and controllers:
+
+```bash
+git clone https://github.com/uldahlalex/dotnetwebapi
+```
+
 ### Create and Run a Web API Using the .NET CLI 
 
 - **Task:** Use the .NET CLI to establish a new Web API. Run the program.
