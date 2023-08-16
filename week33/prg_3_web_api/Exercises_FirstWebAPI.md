@@ -1,16 +1,16 @@
 
 ### Guided solutions can be found here: https://github.com/uldahlalex/dotnetwebapi check Controllers/SolutionsController.cs
 
-## Important: .NET 8 uses another default layout, so i recommend cloning this repo with version 8 and controllers:
+### Intro: Read this to know what it's about.
+We need to make a .NET Web API, because we need to be able to send data over the web. This application should function as the backend server, so client applications can send HTTP requests and get data back.
 
-```bash
-git clone https://github.com/uldahlalex/dotnetwebapi
-```
 
-### Create and Run a Web API Using the .NET CLI 
+### Create and Run a Web API
 
-- **Task:** Use the .NET CLI to establish a new Web API. Run the program.
-- **Success Criteria:** Send an HTTP request and receive a response. 
+- **Task:** Create a new Web API. Preferably one with Controllers.
+Using Rider: pick New Solution (press double shift to search for this). Then select ASP.NET Core Webapplication. Under type, select the Model-View-Controller API.
+Alternatively, you can use the .NET CLI. For newer version, write dotnet new webapi --help and look for the flag to distinguish between minimal API or Controllers.
+- **Success Criteria:** You should be able to see a new .NET project. Start it using dotnet run, and check in the console, that it starts. 
 
 **Objective:** You must know how to set up a basic Web API with a single endpoint.
 
@@ -34,24 +34,43 @@ https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swa
 
 
 
-- **Task:** Create a new Controller class with an endpoint.
+- **Task:** Create a new Controller class. Use the following syntax:
+
+```c#
+[ApiController]
+public class MyNewController : ControllerBase {}
+```
+Now make a controller method in here. Add a route and HTTP type like this:
+
+```c#
+[HttpGet]
+[Route("/example")]
+public object ExampleMethodName() {
+    return "hello from the web server";
+}
+```
+
+Now run the application, and send a request to your localhost webserver (see port number in the console). Don't forget to add /example, or simply use Swagger.
+
 - **Success Criteria:** You should be able to discover the endpoint in Swagger and send request and get a response.
 
-**Objective:** Learn to create new Controllers / groupings of endpoints.
-
-Bonus: Why do you think .NET Web API is capable of "automatically" adding your Controller class to it's valid routes?
+**Objective:** Learn to make a new controller method and request this.
 
 ---
 
 ### GET entity/{id}
 
-**Task:** Make a GET endpoint that can read a route segment (for instance use 
+**Task:** A client wants to request some particular piece of data (like something to be looked up in a database by ID).
 
+Read this section about parameter binding:
+
+Now use The [FromRoute] attribute to bind an ID in a url such as 
+http://localhost:5000/entity/123
 ```C#
-[FromRoute] int id
+public object MyMethodName([FromRoute] int id) { }
 ```
-in the method parameter
-). Return the id to the requester.
+
+Return the ID to the requester to check you successfully can read the ID from the route.
 
 **Success criteria:** When inserting id 42 in Swagger as route segment, you should be able to get the id number response
 
@@ -99,6 +118,8 @@ Return the value to the client.
 
 **Task:** Use the HttpContext class to set some HTTP response header in some endpoint.
 
+Relevant info can be found here: 
+
 **Success criteria:** Send a request to that endpoint with Postman and inspect the response headers. The value should be present.
 
 **Learning objective:** You must know how to use the HttpContext to modify http responses.
@@ -107,7 +128,7 @@ Return the value to the client.
 
 ### Response JSON
 
-**Task:** Return some JSON object to the client in the body(payload) by returning a C# object.
+**Task:** Return some JSON object to the client in the body(payload) by returning a C# object in your controller method.
 
 **Success criteria**: If the serialization is successful, the client should get the object values as JSON.
 
@@ -117,7 +138,7 @@ Return the value to the client.
 
 ### Response status code
 
-**Task:** Manually set the response status code. You can do this using HttpContext. Pick an obscure status code like 418, so you don't accidentally pick the same code as the default.
+**Task:** Manually set the response status code. You can do this using HttpContext.Response.StatusCode. Pick an obscure status code like 418, so you don't accidentally pick the same code as the default.
 
 **Success criteria**: You should see the expected code client side.
 
