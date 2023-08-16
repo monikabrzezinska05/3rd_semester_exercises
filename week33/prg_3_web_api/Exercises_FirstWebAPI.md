@@ -107,25 +107,7 @@ Return the value to the client.
 
 ---
 
-### GET with header attached
-
-#### Correction: Here I meant SET a header with query params, not read
-
-**Task:** Make a GET endpoint that can read a header using:
-
-```c#
-[FromHeader]string someValue
-```
-Return the value to the client.
-(Pick an obscure random name to make sure it is a value you manually left there in Swagger/other HTTP client)
-
-**Success criteria:** When inserting some header value, you should get the value back.
-
-**Learning objective:** You must know how to read/get data from an HTTP header which the client passes
-
----
-
-### Setting some custom header
+### Setting some response header with HttpContext
 
 #### Note: You can both read/write the headers using this class:
 
