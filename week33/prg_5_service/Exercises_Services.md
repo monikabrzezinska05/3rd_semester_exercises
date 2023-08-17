@@ -51,11 +51,16 @@ Call a method from TheDependency inside TheDependent to check that you successfu
 
 If you've made it this far, you should be ready for next week, where we're starting to work with Dapper.
 
-I want want to invest more time into sharpening your skills, try to identify one of these areas you want to improve, and follow the resources I linked: (yes, they are repetitive exercises)
+I want want to invest more time into sharpening your skills, try to identify one of these areas you want to improve:
 
-- Writing algorithms with C#: https://www.w3resource.com/csharp-exercises/ (find a chapter that has a comfortable difficulty)
 - Making SQL queries with PostgreSQL (before starting Dapper on Monday): https://www.w3resource.com/postgresql-exercises/ 
 - Sharpening API skills: I suggest adding more features to the CRUD API which you started yesterday (last exercise of yesterday). Here's an outline of a full CRUD you could aim for: 
+(Don't bother setting up a database for this exercise. I recommend making a simple in-memory database as an array of objects. Make this array inside of another class (not a controller).
+
+**Added friday: Instantiate the other class by adding a singleton service inside Program.cs**:
+builder.Service.AddSingleton<InMemoryDatabaseClass>
+
+Now, require this InMemoryDatabaseClass inside Controller constructors.)
 
     - GET /entities - This endpoint is used to retrieve a list of entities. The server returns a JSON array of entity objects.
 

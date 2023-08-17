@@ -93,7 +93,14 @@ Return a "Bad request" response to a client by throwing an exception.
 
 Please be patient with this exercises - it may require some time. I have deliberately not created a guided solution for this one.
 
-**Task:** Now that you know the basics of making API's, make a Web API which performs basic CRUD operations (without a database - just keep the data in memory).
+**Task:** Now that you know the basics of making API's, make a Web API which performs basic CRUD operations.
+
+Don't bother setting up a database. I recommend making a simple in-memory database as an array of objects. Make this array inside of another class (not a controller).
+
+**Added friday: Instantiate the other class by adding a singleton service inside Program.cs**:
+builder.Service.AddSingleton<InMemoryDatabaseClass>
+
+Now, require this InMemoryDatabaseClass inside Controller constructors.
 
 The following features should be supported:
 
