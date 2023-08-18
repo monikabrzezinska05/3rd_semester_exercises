@@ -97,10 +97,7 @@ Please be patient with this exercises - it may require some time. I have deliber
 
 Don't bother setting up a database. I recommend making a simple in-memory database as an array of objects. Make this array inside of another class (not a controller).
 
-**Added friday: Instantiate the other class by adding a singleton service inside Program.cs**:
-builder.Service.AddSingleton<InMemoryDatabaseClass>
-
-Now, require this InMemoryDatabaseClass inside Controller constructors.
+I have made a small CRUD api with GET and POST to show how to get started: https://github.com/uldahlalex/inmemorybasiccrud
 
 The following features should be supported:
 

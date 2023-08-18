@@ -3,6 +3,9 @@
 - Dependency Injection & service lifetimes
 - Environments and environment variables
 
+Link to example CRUD API with services and controllers: https://github.com/uldahlalex/inmemorybasiccrud
+
+
 **Info**
 - Check marketplace (where you install plugins) for Jetbrains AI Assistant
 - If you have .NET 8 and want a controller layout without cloning my repo, you can run 

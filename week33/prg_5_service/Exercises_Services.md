@@ -56,11 +56,9 @@ I want want to invest more time into sharpening your skills, try to identify one
 - Sharpening API skills: I suggest adding more features to the CRUD API which you started yesterday (last exercise of yesterday). Here's an outline of a full CRUD you could aim for: 
 (Don't bother setting up a database for this exercise. I recommend making a simple in-memory database as an array of objects. Make this array inside of another class (not a controller).
 
-**Added friday: Instantiate the other class by adding a singleton service inside Program.cs**:
-builder.Service.AddSingleton<InMemoryDatabaseClass>
+I have made a small CRUD api with GET and POST to show how to get started: https://github.com/uldahlalex/inmemorybasiccrud
 
-Now, require this InMemoryDatabaseClass inside Controller constructors.)
-
+This could be a functionality you could try to achieve:
     - GET /entities - This endpoint is used to retrieve a list of entities. The server returns a JSON array of entity objects.
 
     - GET /entities/{id} - This endpoint retrieves a specific entity by its unique ID. The server returns a JSON object representing the entity if it exists.
