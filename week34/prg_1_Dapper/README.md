@@ -9,6 +9,8 @@
 - Install some sort of database navigator tool capable of sending request to a Postgres database. (I recommend Jetbrains Datagrip or simply using the extension inside Rider)
 - Do the exercises in the same directory as this readme file.
 
+SLIDES: https://docs.google.com/presentation/d/e/2PACX-1vRif0n0ApeOqfg4jUJZXUoNpfW6K86NrTKM2Ih9czQmAS2TUjhY67H31di98lPz16ADvONTMR1aKax1/pub?start=false&loop=false&delayms=3000
+
 ### Literature & documentation (high priority reading is in *italics*):
 - ElephantSQL getting started: https://www.elephantsql.com/docs/index.html
 - *Npgsql docs: Getting started:* https://www.npgsql.org/doc/index.html *(I recommend reading this one, installation and basic usage chapters)*
