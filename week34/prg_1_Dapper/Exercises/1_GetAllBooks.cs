@@ -9,7 +9,19 @@ public class GetAllBooksExercise
 {
     public IEnumerable<Book> GetAllBooks()
     {
-        var sql = $@"Select "
+        var sql = $@"
+SELECT 
+book_id as {nameof(Book.BookId)},
+title as {nameof(Book.Title)},
+publisher as {nameof(Book.Publisher)},
+cover_img_url as {nameof(Book.CoverImgUrl)}
+
+FROM library.books;
+";
+        using (var conn = Helper.DataSource.OpenConnection())
+        {
+            return conn.Query<Book>(sql);
+        }
     }
 
     [Test]

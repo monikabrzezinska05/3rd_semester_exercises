@@ -17,7 +17,19 @@ public class UpdateBookByIdExercise
     /// <exception cref="NotImplementedException"></exception>
     public Book UpdateBookById(int bookIdToUpdate, string newTitle, string newPublisher, string newCoverImgUrl)
     {
-        throw new NotImplementedException();
+        var sql = @$"
+UPDATE library.books SET title = @newTitle, publisher = @newPublisher, cover_img_url = @newCoverImgUrl WHERE book_Id = @bookIdToUpdate
+RETURNING 
+book_id as {nameof(Book.BookId)},
+title as {nameof(Book.Title)},
+publisher as {nameof(Book.Publisher)},
+cover_img_url as {nameof(Book.CoverImgUrl)};";
+
+        using (var conn = Helper.DataSource.OpenConnection())
+        {
+            return conn.QueryFirst<Book>(sql, new {newTitle, newPublisher, newCoverImgUrl, bookIdToUpdate});
+        }
+        
     }
     
     [Test]
