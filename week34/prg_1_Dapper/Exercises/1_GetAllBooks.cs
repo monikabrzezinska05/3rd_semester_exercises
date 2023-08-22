@@ -9,7 +9,7 @@ public class GetAllBooksExercise
 {
     public IEnumerable<Book> GetAllBooks()
     {
-        throw new NotImplementedException();
+        var sql = $@"Select "
     }
 
     [Test]
